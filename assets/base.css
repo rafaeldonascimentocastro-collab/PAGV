@@ -1,0 +1,93 @@
+/* PAGV — base visual (extraído de growth.etc.br: assets/styles.css e assets/prediag.css) */
+@font-face{font-family:"Outfit";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/outfit-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Outfit";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/outfit-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Hanken Grotesk";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/hanken-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Hanken Grotesk";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/hanken-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Outfit Fallback";src:local("Arial"),local("Helvetica Neue"),local("Helvetica");size-adjust:101.3%;ascent-override:98.8%;descent-override:25.7%;line-gap-override:0%}
+@font-face{font-family:"Hanken Fallback";src:local("Arial"),local("Helvetica Neue"),local("Helvetica");size-adjust:103%;ascent-override:97.1%;descent-override:29.4%;line-gap-override:0%}
+:root {
+  --navy: #182933;
+  --navy-deep: #0F1A21;
+  --navy-soft: #213643;
+  --orange: #DF5D2B;      /* laranja do logo */
+  --orange-ink: #BC491C;   /* laranja para texto pequeno sobre fundo claro (AA) */
+  --orange-lit: #F17F53;   /* laranja para texto pequeno sobre fundo escuro (AA) */
+  --graphite: #444444;    /* cinza do wordmark do logo */
+  --paper: #F6F3EC;
+  --white: #FFFFFF;
+  --ink: #182933;
+  --mute: #566570;
+  --mute-lit: #A8B5BE;
+  --line: rgba(24, 41, 51, .13);
+  --line-lit: rgba(255, 255, 255, .16);
+  --f-display: "Outfit", "Outfit Fallback", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Hanken Grotesk", "Hanken Fallback", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --gutter: 20px;
+  --max: 1180px;
+  --cut: clamp(20px, 3.8vw, 56px);
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --dock-h: 76px;
+  color-scheme: light;
+}
+@media (min-width: 720px) { :root { --gutter: 32px; } }
+@media (min-width: 1100px) { :root { --gutter: 44px; } }
+
+/* ---------- base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 84px; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 400 1.0625rem/1.6 var(--f-body);
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+[hidden] { display: none !important; }
+img, svg, video { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+h1, h2, h3, h4, p, figure, blockquote, dl, dd { margin: 0; }
+button, input, select, textarea { font: inherit; color: inherit; }
+h1, h2, h3, h4 { font-family: var(--f-display); font-weight: 400; line-height: 1.1; letter-spacing: -.02em; text-wrap: balance; }
+p { text-wrap: pretty; }
+:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 6px; }
+.skip { position: absolute; left: 12px; top: -80px; z-index: 100; background: var(--orange); color: var(--navy-deep); padding: 10px 16px; border-radius: 8px; font-weight: 600; text-decoration: none; }
+.skip:focus { top: calc(env(safe-area-inset-top, 0px) + 8px); }
+.wrap { width: 100%; max-width: calc(var(--max) + var(--gutter) * 2); margin-inline: auto; padding-inline: var(--gutter); }
+.nb { white-space: nowrap; }
+main:focus { outline: none; }
+.vh { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- tipografia ---------- */
+.eyebrow { font: 600 .75rem/1.2 var(--f-body); letter-spacing: .16em; text-transform: uppercase; color: var(--orange-ink); }
+.on-dark .eyebrow, .eyebrow--lit { color: var(--orange-lit); }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .6em;
+  min-height: 52px; padding: 0 1.5rem; border-radius: 12px; border: 1.5px solid transparent;
+  font: 600 1rem/1.15 var(--f-body); text-decoration: none; text-align: center; cursor: pointer;
+  transition: transform .2s var(--ease), background-color .2s, border-color .2s, color .2s, box-shadow .2s;
+}
+.btn svg { width: 1.15em; height: 1.15em; flex: none; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.btn--primary { background: var(--orange); color: var(--navy-deep); }
+.btn--primary:hover { background: var(--orange-lit); transform: translateY(-1px); }
+.btn--primary:active { transform: translateY(0); }
+.btn--ghost { border-color: var(--line-lit); color: #fff; background: transparent; }   /* transparent: <button> teria o cinza padrão do navegador (aviso de cookies) */
+.btn--ghost:hover { border-color: rgba(255, 255, 255, .5); background: rgba(255, 255, 255, .05); }
+.btn--line { border-color: var(--line); color: var(--ink); background: transparent; }
+.btn--line:hover { border-color: var(--ink); }
+.btn--lg { min-height: 56px; font-size: 1.0625rem; padding: 0 1.75rem; }
+.btn--sm { min-height: 44px; padding: 0 1.1rem; font-size: .9375rem; }
+.btn--block { width: 100%; }
+.hd { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
+.brand { display: flex; align-items: center; flex: none; min-height: 44px; }
+.brand img { width: 176px; height: auto; }
+.lp-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 60; background: rgba(255, 255, 255, .97); -webkit-backdrop-filter: saturate(1.4) blur(12px); backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid var(--line); }
+.lp-header .hd { min-height: 64px; }
+.lp-header .brand img { width: 168px; height: auto; }
+.lp-hd-actions { display: flex; align-items: center; gap: 6px; }
+.lp-hd-link { display: none; align-items: center; gap: .5em; min-height: 44px; padding: 0 12px; border-radius: 10px; font-weight: 600; font-size: .9375rem; text-decoration: none; color: var(--ink); }
+.lp-hd-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.lp-hd-link svg { width: 18px; height: 18px; stroke: var(--orange-ink); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+@media (min-width: 720px) {
+  .lp-header .brand img { width: 196px; }
+  .lp-hd-link { display: inline-flex; }
+  .lp-hd-actions { gap: 8px; }
+}

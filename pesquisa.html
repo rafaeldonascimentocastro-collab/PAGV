@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>PAGV — Pesquisa Atitudinal de Gerenciamento de Vendas | Growth.Etc</title>
+<meta name="description" content="Questionário da Pesquisa Atitudinal de Gerenciamento de Vendas (PAGV). Respostas tratadas somente por grupo.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://rafaeldonascimentocastro-collab.github.io/PAGV/pesquisa.html">
+<meta name="theme-color" content="#182933">
+<link rel="icon" href="img/favicon.ico" sizes="16x16 32x32 48x48"><link rel="icon" type="image/png" href="img/favicon.png" sizes="256x256"><link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<link rel="preload" href="assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/base.css?v=20261011p">
+<link rel="stylesheet" href="assets/pagv.css?v=20261011p">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 2.8v5.7c0 4.7-3.2 7.9-7.5 9.5-4.3-1.6-7.5-4.8-7.5-9.5V5.8z"/><path d="M8.6 12l2.4 2.4 4.4-4.9"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17.5 14.2c2.2.4 3.5 2.2 3.5 4.8"/></symbol><symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2z"/></symbol></svg><a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="lp-header">
+  <div class="wrap hd">
+    <a class="brand" href="index.html" aria-label="PAGV – início"><img src="img/logo-color.png" width="168" height="36" alt="Growth.Etc – Sales Innovation"></a>
+    <div class="lp-hd-actions"><span class="lp-hd-link" style="display:inline-flex;color:var(--mute)">PAGV 2026</span></div>
+  </div>
+</header>
+<main id="conteudo" tabindex="-1" data-page="pagv">
+<section class="pv-hero">
+  <div class="wrap">
+    <p class="eyebrow">Diagnóstico Growth.Etc · Atitude</p>
+    <h1>Pesquisa Atitudinal de <em>Gerenciamento de Vendas</em></h1>
+    <p id="pv-empresa-row" hidden>Empresa: <span class="pv-emp" id="pv-empresa"></span></p>
+  </div>
+</section>
+<div class="pv-main"><div class="wrap">
+
+<section class="pv-card" id="pv-intro" aria-labelledby="pv-t-intro">
+  <h2 id="pv-t-intro">Antes de começar</h2>
+  <p>Esta pesquisa traça um perfil da empresa na forma de gerenciar a área comercial. Os resultados apontam oportunidades de treinamento e de melhoria. Não há respostas certas ou erradas: responda pensando em <b>como as coisas acontecem hoje</b>, e não em como deveriam ser.</p>
+  <ul class="pv-facts">
+    <li><svg aria-hidden="true" focusable="false"><use href="#i-clock"/></svg><span><b>66 afirmativas</b>, cerca de 12 minutos, em 6 blocos. Dá para pausar: as respostas ficam salvas neste aparelho.</span></li>
+    <li><svg aria-hidden="true" focusable="false"><use href="#i-users"/></svg><span><b>Resultado só por grupo.</b> Nenhuma resposta individual é apresentada, e grupos com menos de 3 pessoas não aparecem.</span></li>
+    <li><svg aria-hidden="true" focusable="false"><use href="#i-shield"/></svg><span><b>Seu nome é opcional.</b> Usamos as respostas apenas para este diagnóstico (LGPD).</span></li>
+  </ul>
+  <form id="pv-form-intro" novalidate>
+    <div class="pv-field">
+      <label for="pv-nivel">Seu nível na empresa *</label>
+      <select id="pv-nivel" required aria-describedby="pv-nivel-err"></select>
+      <span class="pv-err" id="pv-nivel-err" hidden>Selecione o seu nível para continuar.</span>
+    </div>
+    <div class="pv-field">
+      <label for="pv-nome">Nome <span style="font-weight:400;color:var(--mute)">(opcional)</span></label>
+      <input type="text" id="pv-nome" autocomplete="name" maxlength="80">
+    </div>
+    <label class="pv-check"><input type="checkbox" id="pv-lgpd" aria-describedby="pv-lgpd-err"><span>Concordo em participar e que as minhas respostas sejam usadas, de forma agregada, no diagnóstico da empresa, conforme a <a href="https://growth.etc.br/politica-de-privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</span></label>
+    <p class="pv-err" id="pv-lgpd-err" hidden>Marque a concordância para continuar.</p>
+    <button class="btn btn--primary btn--lg" type="submit" id="pv-start">Começar a pesquisa</button>
+  </form>
+</section>
+
+<section id="pv-quest" hidden aria-labelledby="pv-bloco" tabindex="-1">
+  <div class="pv-top">
+    <div class="pv-top-row"><b id="pv-bloco" aria-live="polite">Bloco 1 de 6</b><span id="pv-faixa"></span></div>
+    <div class="pv-progress" id="pv-progbar" role="progressbar" aria-label="Progresso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="pv-bar"></span></div>
+    <p class="pv-top-row" style="margin-top:6px"><span id="pv-prog"></span><span class="pv-hint">Concordo · Sem opinião · Discordo</span></p>
+  </div>
+  <ol class="pv-list" id="pv-list"></ol>
+  <p class="pv-err" id="pv-missing" role="alert" hidden></p>
+  <div class="pv-nav">
+    <button class="btn btn--line" type="button" id="pv-prev" hidden>Bloco anterior</button>
+    <button class="btn btn--primary btn--lg" type="button" id="pv-next">Próximo bloco</button>
+  </div>
+</section>
+
+<section class="pv-card" id="pv-fim" hidden tabindex="-1" aria-labelledby="pv-t-fim">
+  <div id="pv-fim-ok">
+    <div class="pv-ok"><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg><h2 id="pv-t-fim">Respostas enviadas. Obrigado!</h2></div>
+    <p>Sua participação foi registrada. O resultado será apresentado somente por grupo.</p>
+    <p class="pr-note" style="margin-top:14px">Se o consultor pedir, este é o seu código de resposta:</p>
+  </div>
+  <div id="pv-fim-manual" hidden>
+    <h2>Falta um passo: envie o seu código</h2>
+    <p>Não conseguimos enviar automaticamente. Copie o código abaixo e envie ao consultor pelo WhatsApp ou por e-mail.</p>
+  </div>
+  <div class="pv-code"><input id="pv-cod" readonly aria-label="Código de resposta"><button class="btn btn--line btn--sm" type="button" id="pv-copy">Copiar</button></div>
+  <div class="pv-btns"><a class="btn btn--line btn--sm" id="pv-wa" target="_blank" rel="noopener">Enviar pelo WhatsApp</a><a class="btn btn--line btn--sm" id="pv-mail">Enviar por e-mail</a></div>
+</section>
+
+</div></div>
+</main>
+<footer class="pv-foot"><div class="wrap"><p>© 2026 Growth.Etc – Sales Innovation · <a href="https://growth.etc.br/politica-de-privacidade.html">Política de Privacidade</a></p><p><a href="index.html">PAGV</a> · <a href="resultado.html">Área do consultor</a> · Dúvidas: <a href="mailto:growthetc@gmail.com">growthetc@gmail.com</a></p></div></footer>
+<script src="assets/pagv-config.js?v=20261011p"></script>
+<script src="assets/pagv-data.js?v=20261011p"></script>
+<script src="assets/pesquisa.js?v=20261011p"></script>
+</body>
+</html>

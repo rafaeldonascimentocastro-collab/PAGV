@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>PAGV — Tabulação e resultado | Growth.Etc</title>
+<meta name="description" content="Área do consultor: tabulação e resultado da PAGV.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://rafaeldonascimentocastro-collab.github.io/PAGV/resultado.html">
+<meta name="theme-color" content="#182933">
+<link rel="icon" href="img/favicon.ico" sizes="16x16 32x32 48x48"><link rel="icon" type="image/png" href="img/favicon.png" sizes="256x256"><link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<link rel="preload" href="assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/base.css?v=20261011p">
+<link rel="stylesheet" href="assets/pagv.css?v=20261011p">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 2.8v5.7c0 4.7-3.2 7.9-7.5 9.5-4.3-1.6-7.5-4.8-7.5-9.5V5.8z"/><path d="M8.6 12l2.4 2.4 4.4-4.9"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17.5 14.2c2.2.4 3.5 2.2 3.5 4.8"/></symbol><symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2z"/></symbol></svg><a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="lp-header">
+  <div class="wrap hd">
+    <a class="brand" href="index.html" aria-label="PAGV – início"><img src="img/logo-color.png" width="168" height="36" alt="Growth.Etc – Sales Innovation"></a>
+    <div class="lp-hd-actions"><span class="lp-hd-link" style="display:inline-flex;color:var(--mute)">PAGV 2026</span></div>
+  </div>
+</header>
+<main id="conteudo" tabindex="-1" data-page="pagv-resultado">
+<section class="pv-hero">
+  <div class="wrap">
+    <p class="eyebrow">Área do consultor · PAGV 2026</p>
+    <h1>Tabulação e <em>resultado</em></h1>
+    <p>Gere o link da pesquisa, carregue as respostas e veja o índice de 0 a 4 por tema e por nível. O cálculo é o mesmo da planilha: acertos do gabarito ÷ respondentes × 4. Tudo é calculado neste navegador; nada é enviado para fora.</p>
+  </div>
+</section>
+<div class="pv-main"><div class="wrap pr-wrap">
+
+<div class="pr-grid2 pr-noprint">
+  <section class="pr-panel" aria-labelledby="pr-t1">
+    <h2 id="pr-t1">1. Link da pesquisa</h2>
+    <p>Preencha a empresa e os nomes dos níveis. Envie o link aos participantes.</p>
+    <div class="pv-field" style="margin-top:12px"><label for="pr-emp">Empresa</label><input type="text" id="pr-emp" maxlength="80" placeholder="Ex.: Empresa Exemplo Ltda."></div>
+    <p class="pv-lbl" style="margin-bottom:6px">Níveis hierárquicos</p>
+    <div class="pr-levels" id="pr-levels"></div>
+    <div class="pr-link"><input id="pr-url" readonly aria-label="Link da pesquisa"><button class="btn btn--primary btn--sm" type="button" id="pr-copy">Copiar link</button><a class="btn btn--line btn--sm" id="pr-open" target="_blank" rel="noopener">Abrir</a></div>
+  </section>
+
+  <section class="pr-panel" aria-labelledby="pr-t2">
+    <h2 id="pr-t2">2. Respostas</h2>
+    <div class="pr-tabs" role="tablist">
+      <button class="pr-tab" role="tab" aria-selected="true" data-src="planilha" type="button">Planilha Google</button>
+      <button class="pr-tab" role="tab" aria-selected="false" data-src="colar" type="button">Colar códigos ou CSV</button>
+      <button class="pr-tab" role="tab" aria-selected="false" data-src="exemplo" type="button">Dados de exemplo</button>
+    </div>
+    <div data-pane="planilha">
+      <p id="pr-noendp" class="pr-warn" hidden>A Planilha Google ainda não foi conectada. Veja o passo a passo abaixo, ou use “Colar códigos ou CSV”.</p>
+      <div class="pv-field"><label for="pr-key">Chave de acesso</label><input type="password" id="pr-key" autocomplete="off"></div>
+      <button class="btn btn--primary btn--sm" type="button" id="pr-fetch">Buscar respostas da empresa</button>
+    </div>
+    <div data-pane="colar" hidden>
+      <div class="pv-field"><label for="pr-paste">Cole os códigos de resposta (um por linha) ou um CSV da planilha</label><textarea id="pr-paste" spellcheck="false" placeholder="PAGV26|Empresa|1|Diretoria|CCDSC...|2026-11-03T12:00:00Z"></textarea><small>Os códigos chegam no e-mail de cada resposta. Linhas repetidas são ignoradas.</small></div>
+      <div class="pr-actions"><button class="btn btn--primary btn--sm" type="button" id="pr-parse">Tabular</button><label class="btn btn--line btn--sm" style="cursor:pointer">Abrir arquivo CSV<input type="file" id="pr-file" accept=".csv,.txt" hidden></label></div>
+    </div>
+    <div data-pane="exemplo" hidden>
+      <p>Gera 34 respondentes fictícios em 4 níveis, para treinar a leitura do resultado.</p>
+      <button class="btn btn--line btn--sm" type="button" id="pr-demo">Carregar exemplo</button>
+    </div>
+    <p class="pr-note" id="pr-status" role="status" style="margin-top:10px"></p>
+  </section>
+</div>
+
+<section id="pr-out" hidden>
+  <section class="pr-panel" aria-labelledby="pr-t3">
+    <h2 id="pr-t3">Resultado <span id="pr-empname" style="color:var(--mute)"></span></h2>
+    <div class="pr-kpis" id="pr-kpis"></div>
+    <div id="pr-warns"></div>
+  </section>
+  <section class="pr-panel" aria-labelledby="pr-t4">
+    <h2 id="pr-t4">Perfil por tema e nível</h2>
+    <p>Índice de 0 a 4: quanto mais à direita, mais perto do polo positivo do tema. Abaixo de 2,0 é oportunidade de desenvolvimento.</p>
+    <div class="pr-series" id="pr-series"></div>
+    <div class="pr-chart" id="pr-chart"></div>
+  </section>
+  <section class="pr-panel" aria-labelledby="pr-t5">
+    <h2 id="pr-t5">Tabela por tema</h2>
+    <div class="pr-table-wrap"><table class="pr-table" id="pr-table"></table></div>
+    <p class="pr-note" style="margin-top:8px">Faixas: ≥ 2,8 ponto forte · 2,0 a 2,8 atenção · &lt; 2,0 oportunidade. “Sem opinião” acima de 25% indica falta de informação sobre o tema.</p>
+  </section>
+  <section class="pr-panel" aria-labelledby="pr-t6">
+    <h2 id="pr-t6">10 afirmativas mais críticas</h2>
+    <p>Maiores oportunidades de treinamento: as afirmativas em que menos gente respondeu de acordo com o gabarito.</p>
+    <ol class="pr-crit" id="pr-crit"></ol>
+  </section>
+  <div class="pr-actions pr-noprint" style="margin-top:20px"><button class="btn btn--primary" type="button" id="pr-print">Imprimir ou salvar PDF</button><button class="btn btn--line" type="button" id="pr-csv">Baixar tabulação (CSV)</button><button class="btn btn--line" type="button" id="pr-raw">Baixar respostas (CSV)</button></div>
+</section>
+
+<section class="pr-panel pr-noprint" style="margin-top:20px">
+  <details class="pr-help"><summary>Como conectar a Planilha Google (uma vez só)</summary>
+    <ol>
+      <li>Crie uma Planilha Google nova (ex.: “PAGV respostas”).</li>
+      <li>Menu <b>Extensões → Apps Script</b>. Apague o conteúdo e cole o script de <a href="https://github.com/rafaeldonascimentocastro-collab/PAGV/blob/main/apps-script/Codigo.gs" target="_blank" rel="noopener">apps-script/Codigo.gs</a>.</li>
+      <li>Troque <code>TROQUE-ESTA-CHAVE</code> por uma senha só sua e salve.</li>
+      <li><b>Implantar → Nova implantação → App da Web</b>. Executar como: <b>você</b>. Quem pode acessar: <b>Qualquer pessoa</b>. Autorize.</li>
+      <li>Copie a URL do App da Web (termina em <code>/exec</code>) e cole em <code>assets/pagv-config.js</code>, no campo <code>endpoint</code>.</li>
+      <li>Pronto: cada resposta vira uma linha na planilha, e esta página busca as respostas com a sua chave.</li>
+    </ol>
+  </details>
+</section>
+
+</div></div>
+</main>
+<footer class="pv-foot"><div class="wrap"><p>© 2026 Growth.Etc – Sales Innovation · <a href="https://growth.etc.br/politica-de-privacidade.html">Política de Privacidade</a></p><p><a href="index.html">PAGV</a> · <a href="resultado.html">Área do consultor</a> · Dúvidas: <a href="mailto:growthetc@gmail.com">growthetc@gmail.com</a></p></div></footer>
+<script src="assets/pagv-config.js?v=20261011p"></script>
+<script src="assets/pagv-data.js?v=20261011p"></script>
+<script src="assets/resultado.js?v=20261011p"></script>
+</body>
+</html>
